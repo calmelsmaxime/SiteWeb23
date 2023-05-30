@@ -1,0 +1,33 @@
+nav ul {
+	list-style-type : none;
+	margin : auto;
+	overflow : hidden;
+	background : #027c78;
+	border-radius : 50px;
+	max-width:400px;
+	font-family: Georgia;
+}
+
+nav ul li {
+	text-align : center;
+	float : left;
+}
+
+nav ul li a:hover {
+	font-size : 120%;
+	background-color : white;
+	color : black;
+}
+
+
+nav ul li a {
+	display : block;
+	color : white;
+	padding : 15px;
+	text-decoration : none;
+	border-radius : 15px;
+}
+
+ul {
+	text-align: center;
+}

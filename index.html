@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <link rel="stylesheet" type="text/css" href="styles/header.css" media="screen"/>
+  <link rel="stylesheet" type="text/css" href="styles/bas_de_page.css" media="screen"/>
+  <link rel="stylesheet" type="text/css" href="styles/forme_général.css" media="screen"/>
+  <title>Acceuil</title>
+  <meta charset="utf-8">
+ </head>
+ 
+ <body>
+ <header>
+   <nav>
+   
+    <ul>
+			
+		   <li><a href="index.html" >Accueil</a></li>
+		   <li><a href="Bat_1.html">Batiment 1</a></li>
+		   <li><a href="Bat_2.html">Batiment 2</a></li>
+    </ul>
+   </nav>
+  </header> 
+  
+  <section>
+   
+	<h2>Présentation</h2>
+	<p> Nous allons vous présenter dans ce site web des données de 4 capteurs diviser dans 2 batiments, donc 2 capteurs par batiment.
+	</p>
+	<p>Ce projet à était effectué lors de la <strong>SAE 23</strong> en <strong>BUT1 Réseaux et Télécomunnication	</strong>.
+	</p>
+  </section>
+  
+  <section>
+  <h2>But de ce projet</h2>
+	<p>Le but de ce projet est de manipuler des données de capteur en les insérants dans des tables.
+	</p>
+  </section>
+  
+  <section>
+  <h2>Explication de la réalisation du projet</h2>
+  <p> En premier nous avons récupéré les données grâce à un script <strong>bash</strong> et <strong>MQTT</strong>, donc grâce au système de souscrition à des broker.</p>
+	<p>Nous avons ensuite utiliser pour stocker les données une base de données <strong> MySQL</strong>, voici une capture du shéma de la base de donnée.</p>
+	
+	<a TARGET="_blank" href="images/sql.png">
+	<img class="image" alt="base sql" src="images/sql.png"> </a>
+	
+	<p> Pour finir, nous avons un dernier scripte <strong>bash</strong> qui permet de placer les données dans un tableau sur les différentes 
+	pages de ce site, grâce à du code en <strong>PHP</strong>
+	</p>
+	
+  </section>
+
+  
+ <footer>
+    <ul>
+	  <li>IUT de Blagnac</li>
+	  <li>Département Réseaux et Télécommunications</li>
+      <li>BUT1</li>
+	</ul>  
+  </footer>
+  
+</body>
+</html>

@@ -1,0 +1,36 @@
+table{
+	border: 1px solid;
+	border-collapse: collapse;
+	font-size: 100%;
+}
+
+
+caption{
+	text-align: center;
+	border-bottom: 0px;
+	padding:20px;
+	background-color:teal;
+	color: white;
+	max-width: 1000px;
+	height: auto;
+} 
+
+td,th {
+	border: 1px solid black;
+	min-width: 200px;
+}
+
+th{
+	background-color: grey;
+	color: white;
+	max-width: 1000px;
+}
+
+.tab{
+	float: left;
+	width: 30%;
+}
+
+.tab:not(:first-child) {
+      margin-left: 75px;
+    }
