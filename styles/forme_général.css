@@ -1,19 +1,22 @@
-body 
-{
-	font-family: math;
-	font-size: 130%;
-	background: linear-gradient(180deg, rgba(100,170,111,1) 0%, rgba(136,203,125,1) 50%, rgba(153,219,136,1) 100%);
-	color: black;
-	height: 100%;
-	width: 100%;
- }
+/* Styles globaux */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #C9EBFF;
+    color: #333;
+}
+
+section{
+	margin-left: 2%;
+}
 
 img
 {
 	max-width: 500px; 
 	height:auto; 
 	border-radius: 25% 10%;
-clear: both; 
+	clear: both; 
 }
 	
 .section-suivante {
