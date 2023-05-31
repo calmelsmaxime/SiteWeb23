@@ -1,13 +1,9 @@
 footer 
 {
-	left: 0;
-	bottom: 0;
-	height:100%;
-	width: 100%;
-	padding-bottom: 70px;
+	padding-bottom: 50px;
 	background-color: black;
 	color: white;
-	margin-right: 2%;
+	text-align: center;
 }
 
 footer ul li
@@ -24,6 +20,5 @@ footer ul li:first-child
 
 footer ul li:last-child
 {
-	float:right;
 	text-align: right;
 }
