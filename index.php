@@ -14,8 +14,8 @@
    
     <ul>
 		   <li><a href="#" >Accueil</a></li>
-		   <li><a href="Sol_dock.html">Solution docker</a></li>
-		   <li><a href="Sol_php.html">Solution php</a></li>
+		   <li><a href="Sol_dock.php">Solution docker</a></li>
+		   <li><a href="Sol_php.php">Solution php</a></li>
     </ul>
    </nav>
   </header> 
@@ -53,6 +53,8 @@
       <li>BUT1</li>
 	</ul>  
   </footer>
-  
+ <?php
+ echo "helo";
+ ?>
 </body>
 </html>

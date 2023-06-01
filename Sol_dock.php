@@ -5,7 +5,7 @@
   <link rel="stylesheet" type="text/css" href="styles/bas_de_page.css" media="screen"/>
   <link rel="stylesheet" type="text/css" href="styles/forme_général.css" media="screen"/>
   <link rel="stylesheet" type="text/css" href="styles/tableau.css" media="screen"/>
-  <title>Batiment 1</title>
+  <title>Solution docker</title>
   <meta charset="utf-8">
  </head>
  
@@ -15,31 +15,18 @@
    
     <ul class="ul3">
 			
-		   <li><a href="index.html" >Accueil</a></li>
-		   <li><a href="Bat_2.html">Batiment 2</a></li>
-		   <li><a href="Sol_php.html"> Solution php </a></li>
-		   <li><a href="Sol_dock.html">Solution docker</a></li>
-
+		  <li><a href="index.php" >Accueil</a></li>
+		  <li><a href="Sol_php.php">Solution php</a></li>
 
     </ul>
    </nav>
   </header> 
   
-	<section>
-   		<p><a href="php/capt1.php"> </a></p>
+     <section>
+   
 	</section>
- 
-&emsp;
-
-  <section  class="section-suivante">
-
- 	<h2>Se connecter en administrateur</h2>
- 
-		<p><a href="php/Bat_1_admin.php">Acc&egrave;s limit&eacute; : Administration de la base de donn&eacute;es 1 </a></p>
-
- 
-  </section>
-  
+	
+	
  <footer>
     <ul>
 	  <li>IUT de Blagnac</li>

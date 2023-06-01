@@ -16,10 +16,10 @@
    
     <ul class="ul3">
 			
-		   <li><a href="index.html" >Accueil</a></li>
-		   <li><a href="Bat_1.html">Batiment 1</a></li>
-		   <li><a href="Sol_php.html"> Solution php </a></li>
-		   <li><a href="Sol_dock.html">Solution docker</a></li>
+		   <li><a href="index.php" >Accueil</a></li>
+		   <li><a href="Bat_1.php">Batiment 1</a></li>
+		   <li><a href="Sol_php.php"> Solution php </a></li>
+		   <li><a href="Sol_dock.php">Solution docker</a></li>
 
 		   
     </ul>
