@@ -1,7 +1,7 @@
 <section>
 <?php
 
-require_once('connexion_bd.php');
+require 'connexion_bd.php';
 
 echo '<p> La moyenne est de : '   '</p> '
 

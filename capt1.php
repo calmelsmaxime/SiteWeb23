@@ -26,11 +26,11 @@ require 'fonct_moy.php';
 					<th> Date </th> <th> Heure </th> <th> Valeur </th> </tr>
 
 <?php 
-require_once('connexion_bd.php');
+require 'connexion_bd.php';
 
-require_once('fonction.php');
+require 'fonction.php';
 
-require_once('fonct_moy.php');
+require 'fonct_moy.php';
 
 ?>
 </table>

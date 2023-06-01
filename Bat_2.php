@@ -28,7 +28,7 @@
   
    <section>
    
-	<p><a href="php/capt2.php"> </a></p>
+	<?php require 'capt2.php';?>
   </section>
   
 &emsp;
