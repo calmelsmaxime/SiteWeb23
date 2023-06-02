@@ -5,7 +5,7 @@
   <link rel="stylesheet" type="text/css" href="styles/bas_de_page.css" media="screen"/>
   <link rel="stylesheet" type="text/css" href="styles/forme_général.css" media="screen"/>
   <link rel="stylesheet" type="text/css" href="styles/tableau.css" media="screen"/>
-  <title>Solution docker</title>
+  <title>Gestionaire</title>
   <meta charset="utf-8">
  </head>
  
@@ -15,19 +15,29 @@
    
     <ul class="ul3">
 			
-		  <li><a href="index.php" >Accueil</a></li>
-		  <li><a href="Sol_php.php">Solution php</a></li>
+		   <li><a href="index.php" >Accueil</a></li>
+		   <li><a href="consultation.php">Consultation</a></li>
+		   <li><a href="gest_projet.html"> Gestion du projet </a></li>
+		   <li><a href="#">Gestionnaire</a></li>
+		   <li><a href="page_admin.php">Administrateur</a></li>
 
     </ul>
    </nav>
   </header> 
   
-     <section>
-   
-	</section>
-	
-	
- <footer>
+ <section>
+  
+  <?php 
+
+require 'connexion_bd.php';
+
+
+
+?>
+
+ </section>
+ 
+<footer>
     <ul>
 	  <li>IUT de Blagnac</li>
 	  <li>Département Réseaux et Télécommunications</li>
@@ -37,3 +47,5 @@
   
 </body>
 </html>
+	
+	

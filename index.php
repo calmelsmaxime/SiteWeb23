@@ -13,10 +13,11 @@
    <nav>
    
     <ul>
-		   <li><a href="#" >Accueil</a></li>
-		   <li><a href="Sol_dock.php">Solution docker</a></li>
-		   <li><a href="Sol_php.php">Solution php</a></li>
-    </ul>
+		   <<li><a href="#" >Accueil</a></li>
+		   <li><a href="consultation.php">Consultation</a></li>
+		   <li><a href="gest_projet.html"> Gestion du projet </a></li>
+		   <li><a href="page_gest.php">Gestionnaire</a></li>
+		   <li><a href="page_admin.php">Administrateur</a></li>
    </nav>
   </header> 
   
@@ -27,25 +28,34 @@
   </section>
 
 &ensp;
-
-  <section>
-	<h2>But de ce projet</h2>
-		<p>Le but de ce projet est de <strong>manipuler des données de capteur</strong>de deux façons différentes.</p>
-  </section>
- 
-&ensp;
  
   <section>
 	<h2>Solutions à cette problématique</h2>
-		<p>La première solution est d'utilisé des <strong>docker</strong></p>
-		<p>La deuxième solution est d'utilisé des <strong>tables php</strong></p>
+		<p>Nous avons choisit la solution <strong>php</strong>.</p>
+		<p>Elle consiste à créer une base de données et les faires apparaître dans un site web dynamique.</p>
   </section>
-
-&emsp;
-	<section>
-	<img class="image" src="images/photo.jpg">
-	</section>
   
+&ensp;
+
+	<section>
+<h2>Explication de la réalisation du projet pour la solution choisit</h2>
+		<p> Pour réaliser cela, en premier nous avons récupéré les données grâce à un script <strong>bash</strong> et <strong>MQTT</strong>, donc grâce au système de souscrition à des broker.</p>
+		<p>Nous avons ensuite utiliser pour stocker les données une base de données <strong> MySQL</strong>, voici une capture du shéma de la base de donnée.</p>
+ 
+		<a TARGET="_blank" href="images/sql.png">
+		<img class="image" alt="base sql" src="images/sql.png"> </a>
+	
+		<p> Pour finir, nous avons un dernier scripte <strong>bash</strong> qui permet de placer les données dans un tableau sur les différentes 
+	pages de ce site, grâce à du code en <strong>PHP</strong> </p>
+	</section>
+	
+ &emsp;
+ 
+ <section>
+<h2>Mention légales</h2>
+ </section>
+ 
+ 
  <footer>
     <ul>
 	  <li>IUT de Blagnac</li>
@@ -53,8 +63,7 @@
       <li>BUT1</li>
 	</ul>  
   </footer>
- <?php
- echo "helo";
- ?>
+ 
 </body>
 </html>
+

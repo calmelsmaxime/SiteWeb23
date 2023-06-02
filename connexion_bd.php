@@ -1,7 +1,14 @@
-<?php 
+<?php
 
-$id_bd = mysqli_connect("192.168.1.140","calmels2","mdp23","sae23")
-or die("Connexion au serveur et/ou à la base de données impossible");
+$host = 'localhost';
+$username = 'calmels';
+$password = 'mdp23'; // Remplacez par votre nouveau mot de passe
+$database = 'sae23';
 
+$conn = mysqli_connect($host, $username, $password, $database);
+
+if (!$conn) {
+    die('Connexion impossible : ' . mysqli_connect_error());
+}
 
 ?>
