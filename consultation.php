@@ -35,28 +35,14 @@
 				<tr> 
 					<th> Date </th> <th> Heure </th> <th> Valeur </th> </tr>
 	
-<?php 
 
-require 'connexion_bd.php';
-
-require 'dern_val.php';
-
-
-?>
-
-</table>
-
-		<table class="tab">
-			<caption > Salle 2 </caption>
-				<tr> 
-					<th> Date </th> <th> Heure </th> <th> Valeur </th> </tr>
 
 <?php 
-require 'connexion_bd.php';
 
 require 'dern_val.php';
 
 ?>
+
 </table>
 
  </section>

@@ -31,7 +31,7 @@
 
 require 'connexion_bd.php';
 
-
+require 'fonction.php';
 
 ?>
 
