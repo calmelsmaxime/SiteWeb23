@@ -1,6 +1,6 @@
 <?php
 //Connection à la base de donnée
-require 'connexion_bd.php';
+require '../connexion_bd.php';
 
 
 // Récupération des données du formulaire
@@ -15,6 +15,9 @@ $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) == 1) {
 	header('Location: fonction.php');
+	exit();
+	// Redirection vers gest_sql.php avec les données du formulaire
+	header('Location: gest_sql.php?username=' . urlencode($username) . '&password=' . urlencode($password));
     exit();
 } else {
     echo "Nom d'utilisateur ou mot de passe incorrect !"; // Informations d'identification incorrectes

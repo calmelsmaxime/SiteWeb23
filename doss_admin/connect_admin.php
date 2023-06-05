@@ -1,6 +1,6 @@
 <?php
 //Connection à la base de donnée
-require 'connexion_bd.php';
+require '../connexion_bd.php';
 
 
 // Récupération des données du formulaire

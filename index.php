@@ -16,8 +16,8 @@
 		   <<li><a href="#" >Accueil</a></li>
 		   <li><a href="consultation.php">Consultation</a></li>
 		   <li><a href="gest_projet.html"> Gestion du projet </a></li>
-		   <li><a href="page_gest.html">Gestionnaire</a></li>
-		   <li><a href="page_admin.html">Administrateur</a></li>
+		   <li><a href="doss_gest/page_gest.html">Gestionnaire</a></li>
+		   <li><a href="doss_admin/page_admin.html">Administrateur</a></li>
    </nav>
   </header> 
   

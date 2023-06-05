@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
  <head>
-  <link rel="stylesheet" type="text/css" href="styles/header.css" media="screen"/>
-  <link rel="stylesheet" type="text/css" href="styles/bas_de_page.css" media="screen"/>
-  <link rel="stylesheet" type="text/css" href="styles/forme_général.css" media="screen"/>
+  <link rel="stylesheet" type="text/css" href="../styles/header.css" media="screen"/>
+  <link rel="stylesheet" type="text/css" href="../styles/bas_de_page.css" media="screen"/>
+  <link rel="stylesheet" type="text/css" href="../styles/forme_général.css" media="screen"/>
   <title>Administrateur</title>
   <meta charset="utf-8">
  </head>
@@ -14,10 +14,10 @@
 
     <ul class="ul3">
 			
-		   <li><a href="index.php" >Accueil</a></li>
-		   <li><a href="consultation.php">Consultation</a></li>
-		   <li><a href="gest_projet.html"> Gestion du projet </a></li>
-		   <li><a href="page_gest.html">Gestionnaire</a></li>
+		   <li><a href="../index.php" >Accueil</a></li>
+		   <li><a href="../consultation.php">Consultation</a></li>
+		   <li><a href="../gest_projet.html"> Gestion du projet </a></li>
+		   <li><a href="../doss_gest/page_gest.html">Gestionnaire</a></li>
 		   <li><a href="page_admin.html">Administrateur</a></li>
 
     </ul>
@@ -32,9 +32,9 @@
 	supprimer une donnée';
 ?>
 
-</section>
+
   <h2>Choisir qu'elles fonctionnalités à utiliser</h2>
-		<form action="gest_sql.php" method="post">
+		<form action="blblb.php" method="post">
 			<label for="capteur">Choix du capteur : </label><br>
 			<input type="text" id="capteur" name="capteur"><br>
 			
@@ -46,7 +46,7 @@
 			
 			<input type="submit" value="Choix">
 		</form>
-
+</section>
 <footer>
     <ul>
 	  <li>IUT de Blagnac</li>
