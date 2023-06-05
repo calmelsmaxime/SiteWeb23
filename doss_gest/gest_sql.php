@@ -38,16 +38,14 @@
 //Connection à la base de donnée
 require '../connexion_bd.php';
 
+// Récupération des données transmises via l'URL dans gest_sql.php
+$username = $_GET["username"];
+$password = $_GET["password"];
 
 // Récupération des données du formulaire
 $capteur = $_POST['capteur'];
 $date_debut = $_POST['date_debut'];
 $date_fin = $_POST['date_fin'];
-
-// Récupérer les données transmises via l'URL dans gest_sql.php
-$username = $_GET["username"];
-$password = $_GET["password"];
- 
 
 
 // Création du tableau
@@ -62,11 +60,11 @@ echo '
 
 // Récupération des valeurs
 for ($date = $date_debut; $date <= $date_fin; $date++) {
-    $sql = "SELECT t1.*, batiment.Login_gest, batiment.mdp_gest FROM mesure AS t1
-            INNER JOIN batiment AS t2 ON t1.ID_Bat = t2.ID_Bat
-            WHERE t1.ID_Cap = '$capteur' AND t1.date = '$date' 
+    $sql = "SELECT mesure.*, batiment.* FROM mesure
+            INNER JOIN batiment ON batiment.ID_Bat = mesure.ID_Cap
+            WHERE mesure.ID_Cap = '$capteur' AND mesure.date = '$date' 
                 AND batiment.Login_gest = '$username' AND batiment.mdp_gest = '$password'
-            ORDER BY t1.date DESC, t1.horaire DESC";
+            ORDER BY mesure.date DESC, mesure.horaire DESC";
     $result = mysqli_query($conn, $sql);
 
     // Affichage des valeurs

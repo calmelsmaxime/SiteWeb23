@@ -34,9 +34,9 @@
 
 
   <h2>Choisir qu'elles fonctionnalités à utiliser</h2>
-		<form action="blblb.php" method="post">
-			<label for="capteur">Choix du capteur : </label><br>
-			<input type="text" id="capteur" name="capteur"><br>
+		<form action="ajout_bat.php" method="post">
+			<label for="ajout_bat">Ajouter un batiment </label><br>
+			<input type="text" id="ajout_bat" name="ajout_bat"><br>
 			
 			<label for="plage">Date de début :</label><br>
 			<input type="date" id="date_debut" name="date_debut"><br>

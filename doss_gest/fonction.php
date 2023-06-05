@@ -40,7 +40,10 @@ $sql = "SELECT ID_Bat FROM batiment
 	 $batID = $bat['ID_Bat'];
 echo "<h2>Choisir qu'elles données afficher pour le Batiment $batID </h2>"
 
-
+if (mysqli_num_rows($result) == 1) {
+    header('Location: gest_sql.php?username=' . urlencode($username) . '&password=' . urlencode($password));
+    exit();
+}
 	
 ?>
 
