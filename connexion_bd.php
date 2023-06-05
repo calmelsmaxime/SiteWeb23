@@ -2,7 +2,7 @@
 
 $host = 'localhost';
 $username = 'calmels';
-$password = 'mdp23'; // Remplacez par votre nouveau mot de passe
+$password = 'mdp23'; 
 $database = 'sae23';
 
 $conn = mysqli_connect($host, $username, $password, $database);

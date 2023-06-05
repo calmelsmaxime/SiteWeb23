@@ -29,12 +29,6 @@
 
 <h2>Affichage de la dernière mesure de toutes les salles</h2>
 	
-	
-	<table class="tab">
-			<caption > Salle 1 </caption>
-				<tr> 
-					<th> Date </th> <th> Heure </th> <th> Valeur </th> </tr>
-	
 
 
 <?php 
@@ -43,7 +37,6 @@ require 'dern_val.php';
 
 ?>
 
-</table>
 
  </section>
  
