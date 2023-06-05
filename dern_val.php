@@ -1,15 +1,16 @@
 <?php
+//Connection à la base de donnée
 require 'connexion_bd.php';
 
 
 // Compte le nombre de capteur
 $sql = "SELECT COUNT(DISTINCT Nom) AS count FROM capteur";
 $row = mysqli_query($conn, $sql);
-$result = mysqli_fetch_assoc($row);
+$result = mysqli_num_rows($row);
 
 // Créer les tableaux	
 $i = 1;
-while ($i < $result ){
+while ($i > $result ){
 	
 	$sql2 = "SELECT * FROM mesure
 			 WHERE ID_Cap = $i
@@ -34,6 +35,9 @@ while ($i < $result ){
 		
 	// Incrémentation
 	$i++;
-}
+};
+
+//Déconnection de la base de donnée
+mysqli_close($conn);
 
 ?>

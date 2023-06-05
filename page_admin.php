@@ -26,16 +26,18 @@
   </header> 
   
   <section>
-<?php 
-
-require 'connexion_bd.php';
-
-
-
-?>
-
-
+  <h2>Se connecter en administrateur</h2>
+		<form action="connect.php" method="post">
+			<label for="username">Nom d'utilisateur :</label><br>
+			<input type="text" id="username" name="username"><br>
+			
+			<label for="c">Mot de passe :</label><br>
+			<input type="password" id="password" name="password"><br>
+			
+			<input type="submit" value="Se connecter">
+		</form>
  </section>
+
 
 <footer>
     <ul>

@@ -19,24 +19,30 @@
 		   <li><a href="consultation.php">Consultation</a></li>
 		   <li><a href="gest_projet.html"> Gestion du projet </a></li>
 		   <li><a href="#">Gestionnaire</a></li>
-		   <li><a href="page_admin.php">Administrateur</a></li>
+		   <li><a href="page_admin.html">Administrateur</a></li>
 
     </ul>
    </nav>
   </header> 
   
  <section>
+  <h2>Se connecter en administrateur</h2>
+		<form action="connect.php" method="post">
+			<label for="username">Nom d'utilisateur :</label><br>
+			<input type="text" id="username" name="username"><br>
+			
+			<label for="c">Mot de passe :</label><br>
+			<input type="password" id="password" name="password"><br>
+			
+			<input type="submit" value="Se connecter">
+		</form>
+ </section>
+	
+ <section>
   
-  <?php 
-
-require 'connexion_bd.php';
-
-require 'fonction.php';
-
-?>
-
  </section>
  
+
 <footer>
     <ul>
 	  <li>IUT de Blagnac</li>

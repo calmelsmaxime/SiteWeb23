@@ -5,18 +5,18 @@
   <link rel="stylesheet" type="text/css" href="styles/bas_de_page.css" media="screen"/>
   <link rel="stylesheet" type="text/css" href="styles/forme_général.css" media="screen"/>
   <link rel="stylesheet" type="text/css" href="styles/tableau.css" media="screen"/>
-  <title>Consultation</title>
+  <title>Administrateur</title>
   <meta charset="utf-8">
  </head>
  
  <body>
  <header>
    <nav>
-   
+
     <ul class="ul3">
 			
 		   <li><a href="index.php" >Accueil</a></li>
-		   <li><a href="#">Consultation</a></li>
+		   <li><a href="consultation.php">Consultation</a></li>
 		   <li><a href="gest_projet.html"> Gestion du projet </a></li>
 		   <li><a href="page_gest.html">Gestionnaire</a></li>
 		   <li><a href="page_admin.html">Administrateur</a></li>
@@ -25,29 +25,25 @@
    </nav>
   </header> 
   
-  <section>
-
-<h2>Affichage de la dernière mesure de toutes les salles</h2>
-	
+ <section>
+<?php
 
 
-<?php 
-
-require 'dern_val.php';
+//Déconnection de la base de donnée
+mysqli_close($conn);
 
 ?>
 
+</section>
+ 
 
- </section>
- 
- 
- <footer>
+<footer>
     <ul>
 	  <li>IUT de Blagnac</li>
 	  <li>Département Réseaux et Télécommunications</li>
       <li>BUT1</li>
 	</ul>  
   </footer>
-
+  
 </body>
 </html>
