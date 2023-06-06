@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <link rel="stylesheet" type="text/css" href="../styles/header.css" media="screen"/>
+  <link rel="stylesheet" type="text/css" href="../styles/bas_de_page.css" media="screen"/>
+  <link rel="stylesheet" type="text/css" href="../styles/forme_général.css" media="screen"/>
+  <title>Administrateur</title>
+  <meta charset="utf-8">
+ </head>
+ 
+ <body>
+ <header>
+   <nav>
+
+    <ul class="ul3">
+			
+		   <li><a href="../index.php" >Accueil</a></li>
+		   <li><a href="../consultation.php">Consultation</a></li>
+		   <li><a href="../gest_projet.html"> Gestion du projet </a></li>
+		   <li><a href="../doss_gest/page_gest.html">Gestionnaire</a></li>
+		   <li><a href="page_admin.html">Administrateur</a></li>
+
+    </ul>
+   </nav>
+  </header> 
+  
+ <section>
+
+  <h2>Choisir qu'elles fonctionnalités à utiliser</h2>
+		<h3> Fonctionnalités pour les batiments </h3>
+			<form action="ajout_bat/ajout_bat.php" method="post">			
+				<input type="submit" value="Cliquez ici pour ajouter un Batiment">
+			</form>
+		&ensp;
+			<form action="supp_bat/supp_bat.php" method="post">			
+				<input type="submit" value="Cliquez ici pour supprimer un Batiment">
+			</form>
+		&ensp;
+		<h3> Fonctionnalités pour les capteurs </h3>
+			<form action="ajout_cap/ajout_cap.php" method="post">			
+				<input type="submit" value="Cliquez ici pour ajouter un capteur">
+			</form>
+		&ensp;
+			<form action="supp_cap/supp_cap.php" method="post">			
+				<input type="submit" value="Cliquez ici pour supprimer un capteur">
+			</form>
+		&ensp;
+		<h3> Fonctionnalités pour les mesures </h3>
+			<form action="ajout_donn/ajout_donn.php" method="post">			
+				<input type="submit" value="Cliquez ici pour ajouter une valeur">
+			</form>
+		&ensp;
+			<form action="supp_donn/supp_donn.php" method="post">			
+				<input type="submit" value="Cliquez ici pour supprimer une valeur">
+			</form>
+		&ensp;
+</section>
+<footer>
+    <ul>
+	  <li>IUT de Blagnac</li>
+	  <li>Département Réseaux et Télécommunications</li>
+      <li>BUT1</li>
+	</ul>  
+  </footer>
+  
+</body>
+</html>

@@ -14,11 +14,13 @@ $result = mysqli_query($conn, $sql);
 
 
 if (mysqli_num_rows($result) == 1) {
-	header('Location: admin.php');
+	header('Location: admin.html');
     exit();
 } else {
     echo "Nom d'utilisateur ou mot de passe incorrect !"; // Informations d'identification incorrectes
 }
 
+//Déconnection de la base de donnée
+mysqli_close($conn);
 
 ?>

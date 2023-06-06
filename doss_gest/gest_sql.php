@@ -46,18 +46,12 @@ $date_fin = $_POST['date_fin'];
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-//Récupération des valeurs username et password grâce à la superglobale $_GET
-
-$username = $_GET['username'];
-$password = $_GET['password'];
-
 
 //Différence entre les deux dates pour trouver le nombre de jours
 $date1 = strtotime($date_debut);
 $date2 = strtotime($date_fin);
 $diff = abs($date2 - $date1);
 $nombreJours = floor($diff / (60*60*24));
-
 
 
 // Création du tableau

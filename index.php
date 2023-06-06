@@ -27,7 +27,7 @@
 		<p>Ce projet à était effectué lors de la <strong>SAE 23</strong> en <strong>BUT1 Réseaux et Télécomunnication</strong> à l'IUT de Blagnac.</p>
   </section>
 
-&ensp;
+
  
   <section>
 	<h2>Solutions à cette problématique</h2>
@@ -35,7 +35,7 @@
 		<p>Elle consiste à créer une base de données et les faires apparaître dans un site web dynamique.</p>
   </section>
   
-&ensp;
+
 
 	<section>
 <h2>Explication de la réalisation du projet pour la solution choisit</h2>
@@ -49,7 +49,7 @@
 	pages de ce site, grâce à du code en <strong>PHP</strong> </p>
 	</section>
 	
- &emsp;
+
  
  <section>
 <h2>Mention légales</h2>
