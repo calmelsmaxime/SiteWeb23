@@ -38,14 +38,26 @@
 //Connection à la base de donnée
 require '../connexion_bd.php';
 
-// Récupération des données transmises via l'URL dans gest_sql.php
-$username = $_GET["username"];
-$password = $_GET["password"];
 
 // Récupération des données du formulaire
 $capteur = $_POST['capteur'];
 $date_debut = $_POST['date_debut'];
 $date_fin = $_POST['date_fin'];
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+//Récupération des valeurs username et password grâce à la superglobale $_GET
+
+$username = $_GET['username'];
+$password = $_GET['password'];
+
+
+//Différence entre les deux dates pour trouver le nombre de jours
+$date1 = strtotime($date_debut);
+$date2 = strtotime($date_fin);
+$diff = abs($date2 - $date1);
+$nombreJours = floor($diff / (60*60*24));
+
 
 
 // Création du tableau
@@ -57,12 +69,15 @@ echo '
             <th>Heure</th>
             <th>Valeur</th>
         </tr>';
+		
 
 // Récupération des valeurs
-for ($date = $date_debut; $date <= $date_fin; $date++) {
+$i = 0;
+$date_de = $date_debut;
+while ($i <= $nombreJours) {
     $sql = "SELECT mesure.*, batiment.* FROM mesure
             INNER JOIN batiment ON batiment.ID_Bat = mesure.ID_Cap
-            WHERE mesure.ID_Cap = '$capteur' AND mesure.date = '$date' 
+            WHERE mesure.ID_Cap = '$capteur' AND mesure.date = '$date_de' 
                 AND batiment.Login_gest = '$username' AND batiment.mdp_gest = '$password'
             ORDER BY mesure.date DESC, mesure.horaire DESC";
     $result = mysqli_query($conn, $sql);
@@ -73,8 +88,13 @@ for ($date = $date_debut; $date <= $date_fin; $date++) {
         $heure = $row['horaire'];
         $mesure = $row['valeur'];
         echo '<tr><td>' . $date . '</td><td>' . $heure . '</td><td>' . $mesure . '</td></tr>';
-    }
+    };
+	
+	// Ajout de 1 jour à la date actuelle
+    $date_de = date('Y-m-d', strtotime($date_de . ' +1 day'));
+	$i = $i+1;
 }
+
 //Déconnection de la base de donnée
 mysqli_close($conn);
  

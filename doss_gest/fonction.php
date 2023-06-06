@@ -28,6 +28,11 @@
   
   <section>
 <?php 
+//Récupération des valeurs username et password grâce à la superglobale $_GET
+$username = $_GET['username'];
+$password = $_GET['password'];
+
+
 //Connection à la base de donnée
 require '../connexion_bd.php';
 
@@ -38,12 +43,9 @@ $sql = "SELECT ID_Bat FROM batiment
 	$result = mysqli_query($conn, $sql);
 	$bat = mysqli_fetch_assoc($result);
 	 $batID = $bat['ID_Bat'];
-echo "<h2>Choisir qu'elles données afficher pour le Batiment $batID </h2>"
+echo "<h2>Choisir qu'elles données afficher pour le Batiment $batID </h2>";
 
-if (mysqli_num_rows($result) == 1) {
-    header('Location: gest_sql.php?username=' . urlencode($username) . '&password=' . urlencode($password));
-    exit();
-}
+
 	
 ?>
 
