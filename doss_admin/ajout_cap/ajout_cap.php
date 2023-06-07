@@ -49,8 +49,8 @@ echo "<br>";
 			<label for="type">Le type du capteur </label><br>
 			<input type="text" id="type" name="type"><br>
 			
-			<label for="ID_Bat">L'ID du batiment: </label><br>
-			<input type="number" id="ID_Bat" name="ID_Bat"><br>
+			<label for="nom_Bat">Nom du Batiment : </label><br>
+			<input type="text" id="nom_Bat" name="nom_Bat"><br>
 			
 			<input type="submit" value="Créer le capteur">
 		</form>

@@ -14,8 +14,8 @@ $ID_cap = $_POST['ID_cap'];
 
 
 // Requête pour ajouter une donnée si l'ID cap est différent
-$sql = "INSERT INTO mesure (ID_Mes, Date, horaire, Valeur, ID_cap) 
-        VALUES ('$ID_Mes', '$Date', '$horaire', '$val', '$ID_cap')";
+$sql = "INSERT INTO mesure (ID_Mes, Date, horaire, Valeur, ID_cap#) 
+        VALUES ('$ID_Mes', '$Date', '$horaire', '$val','$ID_cap')";
 $result = mysqli_query($conn, $sql);
 
 

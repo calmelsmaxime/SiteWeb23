@@ -11,7 +11,7 @@ $log_gest = $_POST['log_gest'];
 $mdp_gest = $_POST['mdp_gest'];
 
 // Requête pour ajouter un batiment
-$sql = "INSERT INTO batiment (ID_Bat, nom, log_gest, mdp_gest) 
+$sql = "INSERT INTO batiment (ID_Bat, nom, login_gest, mdp_gest) 
 		VALUES ('$ID_Bat', '$nom', '$log_gest', '$mdp_gest')";
 $result = mysqli_query($conn, $sql);
 

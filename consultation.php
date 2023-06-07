@@ -13,7 +13,7 @@
  <header>
    <nav>
    
-    <ul class="ul3">
+    <ul>
 			
 		   <li><a href="index.php" >Accueil</a></li>
 		   <li><a href="#">Consultation</a></li>

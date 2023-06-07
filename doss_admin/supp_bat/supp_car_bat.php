@@ -9,7 +9,7 @@ $ID_Bat = $_POST['ID_Bat'];
 
 
 // Requête pour supprimer le batiment
-$sql = "DELETE * FROM batiment 
+$sql = "DELETE FROM batiment 
 		WHERE ID_Bat = '$ID_Bat'";
 $result = mysqli_query($conn, $sql);
 

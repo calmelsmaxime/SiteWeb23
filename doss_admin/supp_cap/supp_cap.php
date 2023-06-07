@@ -29,6 +29,8 @@
 
 <?php 
 //Affichage des mesures
+require '../nm_cap.php';
+echo '<br>';
 require '../nb_capt.php';
 echo "<br>";
 ?>
@@ -36,8 +38,11 @@ echo "<br>";
 
 		<form action="supp_car_cap.php" method="post">
 		
-			<label for="ID_Cap">L'ID du capteur : </label><br>
-			<input type="number" id="ID_Cap" name="ID_Cap"><br>
+			<label for="nom_cap">Le nom du capteur : </label><br>
+			<input type="text" id="nom_cap" name="nom_cap"><br>
+			
+			<label for="id_cap">L'ID du capteur : </label><br>
+			<input type="number" id="id_cap" name="id_cap"><br>
 			
 			<input type="submit" value="Supprimer le capteur">
 		</form>
