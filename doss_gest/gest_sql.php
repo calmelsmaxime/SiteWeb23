@@ -26,38 +26,35 @@
   </header> 
   
   <section>
-  <h2> Voici ci-dessous les données choisis : </h2>
-  </section>
-
-&ensp;
-
-  <section>
-
 <?php
 
-//Connection à la base de donnée
-require '../connexion_bd.php';
 
 
 // Récupération des données du formulaire
-$capteur = $_POST['capteur'];
+$nom_capteur = $_POST['capteur'];
 $date_debut = $_POST['date_debut'];
 $date_fin = $_POST['date_fin'];
 $username = $_POST['username'];
 $password = $_POST['password'];
 
 
-//Différence entre les deux dates pour trouver le nombre de jours
-$date1 = strtotime($date_debut);
-$date2 = strtotime($date_fin);
-$diff = abs($date2 - $date1);
-$nombreJours = floor($diff / (60*60*24));
+  echo "<h2> Voici ci-dessous les données choisis du $date_debut au $date_fin : </h2>
+  </section>
+
+&ensp;
+
+  <section>";
+
+
+//Connection à la base de donnée
+require '../connexion_bd.php';
+
 
 
 // Création du tableau
 echo '
     <table>
-        <caption>Capteur ', $capteur,' </caption>
+        <caption> ', $nom_capteur,' </caption>
         <tr>
             <th>Date</th>
             <th>Heure</th>
@@ -65,29 +62,56 @@ echo '
         </tr>';
 		
 
-// Récupération des valeurs
-$i = 0;
-$date_de = $date_debut;
-while ($i <= $nombreJours) {
-    $sql = "SELECT mesure.*, batiment.* FROM mesure
-            INNER JOIN batiment ON batiment.ID_Bat = mesure.ID_Cap
-            WHERE mesure.ID_Cap = '$capteur' AND mesure.date = '$date_de' 
-                AND batiment.Login_gest = '$username' AND batiment.mdp_gest = '$password'
-            ORDER BY mesure.date DESC, mesure.horaire DESC";
-    $result = mysqli_query($conn, $sql);
 
-    // Affichage des valeurs
-    while ($row = mysqli_fetch_assoc($result)) {
-        $date = $row['date'];
-        $heure = $row['horaire'];
-        $mesure = $row['valeur'];
-        echo '<tr><td>' . $date . '</td><td>' . $heure . '</td><td>' . $mesure . '</td></tr>';
-    };
+// Recherche de l'ID du capteur 
+$sql = "SELECT * FROM capteur        
+            WHERE Nom = '$nom_capteur'
+			ORDER BY ID_Cap ASC
+            LIMIT 1";
+	$result = mysqli_query($conn, $sql);
+	$row = mysqli_fetch_assoc($result);
+    $ID_Cap = $row['ID_Cap'];
+
+
+
+// Cherche le nombre de valeur dans l'intervalle 
+$sql2 = " SELECT COUNT(ID_Cap) AS count FROM mesure
+        WHERE ID_Cap LIKE '$ID_Cap%'
+		
+        AND date BETWEEN '$date_debut' AND '$date_fin' ";
+      $result2 = mysqli_query($conn, $sql2);
+	$row2 = mysqli_fetch_assoc($result2);
+	$nb_val = $row2['count']; 
+
+
+
+// Affichage des valeurs dans le tableau
+for ($i= 1; $i <= $nb_val; $i++){
 	
-	// Ajout de 1 jour à la date actuelle
-    $date_de = date('Y-m-d', strtotime($date_de . ' +1 day'));
-	$i = $i+1;
+	// Récupération des valeurs de mesure dans l'intervalle
+	$sql3 = "SELECT * FROM mesure 
+			WHERE ID_Cap LIKE '$ID_Cap%' 
+			AND date BETWEEN '$date_debut' AND '$date_fin'
+			LIMIT " . ($i - 1) . ", 1";
+	$result3 = mysqli_query($conn, $sql3);
+	$row3 = mysqli_fetch_assoc($result3);
+	
+	//Affichage
+    $date = $row3['Date']; 
+	$heure = $row3['Horaire'];
+	$heure_formatee = date("H:i:s", strtotime($heure));
+	$mesure = $row3['Valeur'];
+   
+   // Affichage des dernières valeurs
+        echo '<tr><td>', 
+			$date, '</td><td>', 
+			$heure_formatee, '</td><td>', 
+			$mesure, '</tr>';
+   
 }
+
+echo '</table>';
+
 
 //Déconnection de la base de donnée
 mysqli_close($conn);

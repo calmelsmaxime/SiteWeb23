@@ -33,6 +33,8 @@
 
 require '../nb_bat.php';
 echo "<br>";
+require '../nm_bat.php';
+echo "<br>";
 
 ?>
 &ensp;

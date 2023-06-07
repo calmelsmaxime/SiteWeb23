@@ -1,7 +1,7 @@
-<?php 
+<?php
 
 // Connection à la base de donnée
-require '../../connexion_bd.php';
+require '../connexion_bd.php';
 
 // Requête pour trouver le nombre de capteurs 
 	$sql = "SELECT COUNT(*) AS nom FROM capteur";
@@ -18,4 +18,5 @@ echo '<strong> Le nom des capteurs sont : </strong> ';
     while ($row2 = mysqli_fetch_assoc($result2)) {
         echo $row2['nom'] . ', ';
     }
+
 ?>

@@ -11,7 +11,7 @@ $type = $_POST['type'];
 $nom_Bat = $_POST['nom_Bat'];
 
 
-//Requête pour récupéré les données du batiments choisit ( login,mdp)
+//Requête pour récupéré les données du batiments choisit
 $sql = "SELECT * FROM batiment 
 		WHERE nom = '$nom_Bat' 
 		LIMIT 1";
@@ -33,12 +33,12 @@ $result2 = mysqli_query($conn, $sql2);
 
 
 // Requête pour ajouter un capteur dans les capteurs
-$sql = "INSERT INTO capteur (ID_Cap, nom, Type, ID_Bat) 
+$sql3 = "INSERT INTO capteur (ID_Cap, nom, Type, ID_Bat) 
 		VALUES ('$ID_Cap', '$nom', '$type', '$ID_Bat_Cap')";
-$result = mysqli_query($conn, $sql);
+$result3 = mysqli_query($conn, $sql3);
 
 // Vérification de l'exécution de la requête
-if ($result) {
+if ($result2 && $result3) {
     echo "Le capteur a été ajouté avec succès.";
 } else {
     echo "Une erreur s'est produite lors de l'ajout du capteur : " . mysqli_error($conn);

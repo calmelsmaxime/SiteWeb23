@@ -32,7 +32,7 @@
 
 require '../nb_mes.php';
 echo "<br>";
-require '../nb_capt.php';
+require '../nm_cap.php';
 echo "<br>";
 ?>
 
@@ -51,8 +51,8 @@ echo "<br>";
 			<label for="val">Sa valeur : </label><br>
 			<input type="number" id="val" name="val"><br>
 			
-			<label for="ID_cap">L'ID de son capteur : </label><br>
-			<input type="number" id="ID_cap" name="ID_cap"><br>
+			<label for="nom_cap">Le nom de son capteur : </label><br>
+			<input type="text" id="nom_cap" name="nom_cap"><br>
 			
 			<input type="submit" value="Créer la nouvelle valeur">
 		</form>

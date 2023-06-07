@@ -36,7 +36,8 @@ $password = $_POST['password'];
 
 // Requête pour récupérer l'utilisateur correspondant aux informations d'identification fournies
 $sql = "SELECT * FROM batiment 
-		WHERE Login_gest = '$username' AND mdp_gest = '$password'";
+		WHERE Login_gest = '$username' AND mdp_gest = '$password'
+		LIMIT 1";
 $result = mysqli_query($conn, $sql);
 
 
@@ -44,16 +45,16 @@ if (mysqli_num_rows($result) == 1) {
 	
 	// Selection uniquement du batiment du gestionnaire
 	$sql = "SELECT ID_Bat FROM batiment
-				 WHERE Login_gest = '$username' AND mdp_gest = '$password'
-				 LIMIT 1;";
+				 WHERE Login_gest = '$username' AND mdp_gest = '$password'";
 		$result = mysqli_query($conn, $sql);
 		$bat = mysqli_fetch_assoc($result);
 		 $batID = $bat['ID_Bat'];
 		 
 	echo "<h2>Choisir qu'elles données afficher pour le Batiment $batID </h2>";
+	require 'nm_cap2.php';
 	echo '<form action="gest_sql.php" method="post">
-				<label for="capteur">Choix du capteur : </label><br>
-				<input type="text" id="capteur" name="capteur"><br>
+				<label for="nom_capteur">Choix du capteur : </label><br>
+				<input type="text" id="nom_capteur" name="nom_capteur"><br>
 				
 				<label for="plage">Date de début :</label><br>
 				<input type="date" id="date_debut" name="date_debut"><br>
