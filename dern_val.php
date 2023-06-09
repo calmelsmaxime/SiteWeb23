@@ -6,21 +6,37 @@ require 'connexion_bd.php';
 $sql = "SELECT COUNT(DISTINCT nom) AS count FROM capteur";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
-$count = $row['count'];
+$nb_cap = $row ['count'];
 
 
-// Parcourir les capteurs
-for ($i = 1; $i <= $count; $i++) {
-		$sql2 = "SELECT * FROM mesure
-		WHERE ID_Cap LIKE '" . $i . "%'
-        ORDER BY date DESC, horaire DESC
-		LIMIT 1";
-    $result2 = mysqli_query($conn, $sql2);
+for ($i = 1; $i <= $nb_cap; $i++){
+	// Recherche du nom du capteur
+	$sql2 = "SELECT DISTINCT Nom FROM capteur
+	ORDER BY nom ASC 
+	LIMIT " . ($i - 1) . ", 1";
+	$result2 = mysqli_query($conn, $sql2);
 	$row2 = mysqli_fetch_assoc($result2);
+	$cap = $row2['Nom'];
+
+	
+	//recherche de l'id du capteur
+	$sql3 = "SELECT * FROM capteur
+			WHERE Nom LIKE '$cap'";
+	$result3 = mysqli_query($conn, $sql3);
+	$row2 = mysqli_fetch_assoc($result3);
+	$ID_cap = $row2['ID_Cap'];
+	
+	//recherche de la dernière mesure du capteur
+	$sql4 = "SELECT * FROM mesure
+			WHERE ID_Cap LIKE '%" . $ID_cap . "%'
+			ORDER BY date DESC, horaire DESC
+			LIMIT 1";
+    $result4 = mysqli_query($conn, $sql4);
+	$row4= mysqli_fetch_assoc($result4);
 
     echo '
     <table class="tab">
-        <caption>Salle ', $i, '</caption>
+        <caption>Salle ', $cap, '</caption>
         <tr>
             <th>Date</th>
             <th>Heure</th>
@@ -28,10 +44,10 @@ for ($i = 1; $i <= $count; $i++) {
         </tr>';
 
 	// récupération des données
-	$date = $row2['Date']; 
-	$heure = $row2['Horaire'];
+	$date = $row4['Date']; 
+	$heure = $row4['Horaire'];
 	$heure_formatee = date("H:i:s", strtotime($heure));
-	$mesure = $row2['Valeur'];
+	$mesure = $row4['Valeur'];
 	
     // Affichage des dernières valeurs
         echo '<tr><td>', $date, '</td><td>', 
@@ -41,6 +57,9 @@ for ($i = 1; $i <= $count; $i++) {
     
     echo '</table> <br>';
 }
+
+
+
 
 // Déconnexion de la base de données
 mysqli_close($conn);

@@ -1,10 +1,16 @@
 <?php
+// Récupération de l'ID du bat 
+$ID_bat = $_POST['batID'];
+
+
+
 
 // Connection à la base de donnée
 require '../connexion_bd.php';
 
 // Requête pour trouver le nombre de capteurs 
-	$sql = "SELECT COUNT(*) AS nom FROM capteur";
+	$sql = "SELECT COUNT(*) AS nom FROM capteur
+			WHERE ID_bat = '$ID_bat%'";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_assoc($result);
 	$total_capteurs = $row['nom'];

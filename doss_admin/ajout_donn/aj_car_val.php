@@ -25,7 +25,7 @@ $type = $row['Type'];
 
 // Requête pour récupérer les données du bâtiment lié au capteur
 $sql2 = "SELECT * FROM batiment 
-        WHERE ID_Bat = '$ID_Bat'
+        WHERE ID_Bat = '$ID_Bat%'
         LIMIT 1";
 $result2 = mysqli_query($conn, $sql2);
 $row2 = mysqli_fetch_assoc($result2);
@@ -35,11 +35,11 @@ $nom_Bat = $row2['Nom'];
 $log = $row2['Login_gest'];
 $mdp = $row2['mdp_gest'];
 
-// Concaténation pour créer l'ID de la mesure et l'ID du capteur
-$ID_Cap_Mes = $ID_Cap . $ID_Mes;
 
 // Concaténation de $ID_Bat et $ID_Cap
-$ID_Bat_Cap_Mes = $ID_Bat . $ID_Cap . $ID_Mes;
+$ID_Bat_Cap_Mes = $ID_Bat . $ID_Mes;
+
+// 
 
 // Requête pour ajouter le bâtiment si nécessaire (ignorer si déjà présent)
 $sql3 = "INSERT IGNORE INTO batiment (ID_Bat, nom, login_gest, mdp_gest) 
@@ -48,12 +48,12 @@ $result3 = mysqli_query($conn, $sql3);
 
 // Requête pour ajouter le capteur si nécessaire (ignorer si déjà présent)
 $sql4 = "INSERT IGNORE INTO capteur (ID_Cap, nom, Type, ID_Bat) 
-         VALUES ('$ID_Cap_Mes', '$nom_cap', '$type', '$ID_Bat_Cap_Mes')";
+         VALUES ('$ID_Bat_Cap_Mes', '$nom_cap', '$type', '$ID_Bat_Cap_Mes')";
 $result4 = mysqli_query($conn, $sql4);
 
 // Requête pour ajouter la mesure
 $sql5 = "INSERT INTO mesure (ID_Mes, Date, horaire, Valeur, ID_Cap) 
-         VALUES ('$ID_Cap_Mes', STR_TO_DATE('$Date', '%Y-%m-%d'), '$horaire', '$val', '$ID_Cap_Mes')";
+         VALUES ('$ID_Bat_Cap_Mes', STR_TO_DATE('$Date', '%Y-%m-%d'), '$horaire', '$val', '$ID_Bat_Cap_Mes')";
 $result5 = mysqli_query($conn, $sql5);
 
 // Vérification de l'exécution des requêtes

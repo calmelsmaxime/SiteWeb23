@@ -32,7 +32,7 @@
 //Affichage des batiments
 require '../nb_capt.php';
 echo "<br>";
-require '../nb_bat.php';
+require '../nm_bat.php';
 echo "<br>";
 
 ?>

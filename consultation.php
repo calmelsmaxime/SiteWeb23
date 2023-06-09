@@ -41,7 +41,7 @@ require 'dern_val.php';
  </section>
  
  
- <footer>
+ <footer class = "f1">
     <ul>
 	  <li>IUT de Blagnac</li>
 	  <li>Département Réseaux et Télécommunications</li>

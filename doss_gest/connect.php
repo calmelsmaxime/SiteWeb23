@@ -51,8 +51,26 @@ if (mysqli_num_rows($result) == 1) {
 		 $batID = $bat['ID_Bat'];
 		 
 	echo "<h2>Choisir qu'elles données afficher pour le Batiment $batID </h2>";
-	require 'nm_cap2.php';
-	echo '<form action="gest_sql.php" method="post">
+
+// Requête pour trouver le nombre de capteurs 
+	$sql = "SELECT COUNT(*) AS nom FROM capteur
+			WHERE ID_bat LIKE '$batID%'";
+	$result = mysqli_query($conn, $sql);
+	$row = mysqli_fetch_assoc($result);
+	$total_capteurs = $row['nom'];
+	
+// Requête pour récupérer les capteurs 
+$sql2 = "SELECT DISTINCT nom FROM capteur
+			WHERE ID_bat LIKE '$batID%'";
+$result2 = mysqli_query($conn, $sql2);
+
+// Affichage des capteurs 
+echo '<strong> Le nom des capteurs de ce batiments sont : </strong> ';
+    while ($row2 = mysqli_fetch_assoc($result2)) {
+        echo $row2['nom'] . ', ';
+    }
+
+	echo '<br> &ensp; <form action="gest_sql.php" method="post">
 				<label for="nom_capteur">Choix du capteur : </label><br>
 				<input type="text" id="nom_capteur" name="nom_capteur"><br>
 				

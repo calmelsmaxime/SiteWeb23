@@ -31,7 +31,7 @@
 //Affichage des mesures et des capteurs
 
 require '../nb_mes.php';
-echo "<br>";
+echo "  <br> ";
 require '../nm_cap.php';
 echo "<br>";
 ?>

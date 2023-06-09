@@ -25,7 +25,7 @@
   </header> 
 
 <section>
- <h2>Choisir la donnée à supprimer</h2>
+ <h2>Choisir le capteur à supprimer</h2>
 
 <?php 
 //Affichage des mesures

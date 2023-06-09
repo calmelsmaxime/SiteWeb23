@@ -14,7 +14,7 @@ $sql2 = "SELECT DISTINCT nom FROM batiment";
 $result2 = mysqli_query($conn, $sql2);
 
 // Affichage des batiment 
-echo '<strong> Les nom des batiment sont : </strong> ';
+echo ' <br> <strong> Les nom des batiment sont : </strong> ';
     while ($row2 = mysqli_fetch_assoc($result2)) {
         echo $row2['nom'] . ', ';
     }
