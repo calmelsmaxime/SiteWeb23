@@ -28,7 +28,7 @@ for ($i = 1; $i <= $nb_cap; $i++){
 	
 // Query to search for the latest measurement of the sensor
 	$sql4 = "SELECT * FROM mesure
-			WHERE ID_Cap LIKE '%" . $ID_cap . "%'
+			WHERE ID_Cap LIKE '_" . $ID_cap . "%'
 			ORDER BY date DESC, horaire DESC
 			LIMIT 1";
     $result4 = mysqli_query($conn, $sql4);
