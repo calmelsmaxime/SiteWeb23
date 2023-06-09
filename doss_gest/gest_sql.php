@@ -75,7 +75,7 @@ $sql = "SELECT * FROM capteur
 
 // Cherche le nombre de valeur dans l'intervalle 
 $sql2 = " SELECT COUNT(ID_Cap) AS count FROM mesure
-        WHERE ID_Cap LIKE '%$ID_Cap%'
+        WHERE ID_Cap LIKE '%_%$ID_Cap%'
         AND date BETWEEN '$date_debut' AND '$date_fin' ";
       $result2 = mysqli_query($conn, $sql2);
 	
@@ -88,7 +88,7 @@ for ($i= 1; $i <= $nb_val; $i++){
 	
 	// Récupération des valeurs de mesure dans l'intervalle
 	$sql3 = "SELECT * FROM mesure 
-			WHERE ID_Cap LIKE '%$ID_Cap%' 
+			WHERE ID_Cap LIKE '%_%$ID_Cap%'
 			AND date BETWEEN '$date_debut' AND '$date_fin'
 			LIMIT " . ($i - 1) . ", 1";
 	$result3 = mysqli_query($conn, $sql3);
