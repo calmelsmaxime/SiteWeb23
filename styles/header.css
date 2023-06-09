@@ -9,13 +9,13 @@ header {
 	margin-top: 10px;
 }
 
-/* Barre de navigation */
+/* Navigation bar */
 nav {
     background-color: #fff;
-    padding: 5px 0; /* Rendre la barre de navigation plus petite */
+    padding: 5px 0; 
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
-    border-radius: 15px; /* Ajout d'arrondis à la barre de navigation */
-    margin: 10px 20px; /* Ajout de marges pour laisser de l'espace autour de la barre de navigation */
+    border-radius: 15px; 
+    margin: 10px 20px; 
 }
 
 nav ul {

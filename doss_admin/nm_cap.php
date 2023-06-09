@@ -1,19 +1,19 @@
 <?php 
 
-// Connection à la base de donnée
+// Connecting to the database
 require '../../connexion_bd.php';
 
-// Requête pour trouver le nombre de capteurs 
+// Query to find the number of sensors
 	$sql = "SELECT COUNT(*) AS nom FROM capteur";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_assoc($result);
 	$total_capteurs = $row['nom'];
 	
-// Requête pour récupérer les capteurs 
+// Query to retrieve the sensors
 $sql2 = "SELECT DISTINCT nom FROM capteur";
 $result2 = mysqli_query($conn, $sql2);
 
-// Affichage des capteurs 
+// Displaying the sensors
 echo '<strong> Le nom des capteurs sont : </strong> ';
     while ($row2 = mysqli_fetch_assoc($result2)) {
         echo $row2['nom'] . ', ';

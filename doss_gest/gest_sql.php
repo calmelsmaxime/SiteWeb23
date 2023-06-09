@@ -15,7 +15,7 @@
    
     <ul class="ul3">
 			
-		   <li><a href="../index.php" >Accueil</a></li>
+		   <li><a href="../index.html" >Accueil</a></li>
 		   <li><a href="../consultation.php">Consultation</a></li>
 		   <li><a href="../gest_projet.html"> Gestion du projet </a></li>
 		   <li><a href="page_gest.html">Gestionnaire</a></li>
@@ -38,7 +38,7 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 
-  echo "<h2> Voici ci-dessous les données choisis du $date_debut au $date_fin : </h2>
+  echo "<h2> Voici ci-dessous les données choisies du $date_debut au $date_fin : </h2>
   </section>
 
 &ensp;
@@ -46,12 +46,11 @@ $password = $_POST['password'];
   <section>";
 
 
-//Connection à la base de donnée
+// Connection to the database
 require '../connexion_bd.php';
 
 
-
-// Création du tableau
+// Table creation
 echo '
     <table>
         <caption> ', $nom_capteur,' </caption>
@@ -73,7 +72,7 @@ $sql = "SELECT * FROM capteur
     $ID_Cap = $row['ID_Cap'];
 
 
-// Cherche le nombre de valeur dans l'intervalle 
+// Sensor ID search
 $sql2 = " SELECT COUNT(ID_Cap) AS count FROM mesure
         WHERE ID_Cap LIKE '%_%$ID_Cap%'
         AND date BETWEEN '$date_debut' AND '$date_fin' ";
@@ -83,10 +82,10 @@ $sql2 = " SELECT COUNT(ID_Cap) AS count FROM mesure
 	$nb_val = $row2['count']; 
 
 
-// Affichage des valeurs dans le tableau
+//Displaying values in the table
 for ($i= 1; $i <= $nb_val; $i++){
 	
-	// Récupération des valeurs de mesure dans l'intervalle
+	// Retrieving measurement values within the interval
 	$sql3 = "SELECT * FROM mesure 
 			WHERE ID_Cap LIKE '%_%$ID_Cap%'
 			AND date BETWEEN '$date_debut' AND '$date_fin'
@@ -94,13 +93,12 @@ for ($i= 1; $i <= $nb_val; $i++){
 	$result3 = mysqli_query($conn, $sql3);
 	$row3 = mysqli_fetch_assoc($result3);
 	
-	//Affichage
     $date = $row3['Date']; 
 	$heure = $row3['Horaire'];
 	$heure_formatee = date("H:i:s", strtotime($heure));
 	$mesure = $row3['Valeur'];
    
-   // Affichage des dernières valeurs
+   // Displaying the latest values
         echo '<tr><td>', 
 			$date, '</td><td>', 
 			$heure_formatee, '</td><td>', 
@@ -111,7 +109,7 @@ for ($i= 1; $i <= $nb_val; $i++){
 echo '</table>';
 
 
-//Déconnection de la base de donnée
+//Disconnecting from the database
 mysqli_close($conn);
  
 ?>

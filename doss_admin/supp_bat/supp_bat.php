@@ -14,7 +14,7 @@
 
     <ul class="ul3">
 			
-		   <li><a href="../../index.php" >Accueil</a></li>
+		   <li><a href="../../index.html" >Accueil</a></li>
 		   <li><a href="../../consultation.php">Consultation</a></li>
 		   <li><a href="../../gest_projet.html"> Gestion du projet </a></li>
 		   <li><a href="../../doss_gest/page_gest.html">Gestionnaire</a></li>
@@ -28,7 +28,7 @@
  <h2>Choisir le Batiment à supprimer</h2>
 	
 	<?php 
-//Affichage des batiments
+//Displaying the buildings
 
 require '../nb_bat.php';
 echo "<br>";

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <link rel="stylesheet" type="text/css" href="styles/header.css" media="screen"/>
+  <link rel="stylesheet" type="text/css" href="styles/bas_de_page.css" media="screen"/>
+  <link rel="stylesheet" type="text/css" href="styles/forme_général.css" media="screen"/>
+  <title>Acceuil</title>
+  <meta charset="utf-8">
+ </head>
+ 
+ <body>
+ <header>
+   <nav>
+   
+    <ul>
+		   <<li><a href="#" >Accueil</a></li>
+		   <li><a href="consultation.php">Consultation</a></li>
+		   <li><a href="gest_projet.html"> Gestion du projet </a></li>
+		   <li><a href="doss_gest/page_gest.html">Gestionnaire</a></li>
+		   <li><a href="doss_admin/page_admin.html">Administrateur</a></li>
+   </nav>
+  </header> 
+  
+  <section>
+	<h2>Présentation</h2>
+	<p>Nous allons vous présenter dans ce site web des données de 4 capteurs divisés dans 2 bâtiments, donc 2 capteurs par bâtiment.</p>
+	<p>Ce projet a été effectué lors de la <strong>SAE 23</strong> en <strong>BUT1 Réseaux et Télécommunications</strong> à l'IUT de Blagnac.</p>
+</section>
+
+<section>
+	<h2>Solutions à cette problématique</h2>
+	<p>Nous avons choisi la solution <strong>PHP</strong>.</p>
+	<p>Elle consiste à créer une base de données et les faire apparaître dans un site web dynamique.</p>
+</section>
+
+<section>
+	<h2>Explication de la réalisation du projet pour la solution choisie</h2>
+	<p>Pour réaliser cela, en premier nous avons récupéré les données grâce à un script <strong>Bash</strong> et <strong>MQTT</strong>, donc grâce au système de souscription à des brokers.</p>
+	<p>Nous avons ensuite utilisé une base de données <strong>MySQL</strong> pour stocker les données. Voici une capture du schéma de la base de données :</p>
+
+	<a target="_blank" href="images/sql.png">
+		<img class="image" alt="base sql" src="images/sql.png">
+	</a>
+
+	<p>Pour finir, nous avons un dernier script <strong>Bash</strong> qui permet de placer les données dans un tableau sur les différentes pages de ce site, grâce à du code en <strong>PHP</strong>.</p>
+</section>
+
+	
+
+ 
+ <section>
+<h2>Mention légales</h2>
+
+
+<p>En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé aux utilisateurs du site internet http://calmels2.atwebpages.com/TP_SAE14 l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi:
+Propriétaire du site : Calmels Maxime.
+Hébergeur : Autreeohost</p>
+
+<p>
+Calmels Maxime est propriétaire des droits de propriété intellectuelle et détient les droits d’usage sur tous les éléments accessibles sur le site internet, notamment les textes, images, graphismes, logos, vidéos, architecture, icônes et sons.
+Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable du propiétaire.
+Toute exploitation non autorisée du site ou de l’un quelconque des éléments qu’il contient sera considérée comme constitutive d’une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle. 
+</p>
+ </section>
+ 
+ 
+ <footer>
+    <ul>
+	  <li>IUT de Blagnac</li>
+	  <li>Département Réseaux et Télécommunications</li>
+      <li>BUT1</li>
+	</ul>  
+  </footer>
+ 
+</body>
+</html>
+

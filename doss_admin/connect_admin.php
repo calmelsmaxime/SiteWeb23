@@ -1,13 +1,13 @@
 <?php
-//Connection à la base de donnée
+//Connecting to the database
 require '../connexion_bd.php';
 
 
-// Récupération des données du formulaire
+// Retrieving data from the form
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-// Requête pour récupérer l'utilisateur correspondant aux informations d'identification fournies
+// Query to retrieve the user matching the provided credentials
 $sql = "SELECT * FROM administration 
 		WHERE login = '$username' AND mdp = '$password'";
 $result = mysqli_query($conn, $sql);
@@ -17,10 +17,10 @@ if (mysqli_num_rows($result) == 1) {
 	header('Location: admin.html');
     exit();
 } else {
-    echo "Nom d'utilisateur ou mot de passe incorrect !"; // Informations d'identification incorrectes
+    echo "Nom d'utilisateur ou mot de passe incorrect !";
 }
 
-//Déconnection de la base de donnée
+//Disconnecting from the database
 mysqli_close($conn);
 
 ?>

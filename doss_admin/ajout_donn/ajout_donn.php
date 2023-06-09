@@ -28,7 +28,7 @@
   <h2>Choisir les caractéristiques de la valeur à ajouter</h2>
 		
 <?php 
-//Affichage des mesures et des capteurs
+//Display of measurements and sensors
 
 require '../nb_mes.php';
 echo "  <br> ";

@@ -14,7 +14,7 @@
 
     <ul class="ul3">
 			
-		   <li><a href="../../index.php" >Accueil</a></li>
+		   <li><a href="../../index.html" >Accueil</a></li>
 		   <li><a href="../../consultation.php">Consultation</a></li>
 		   <li><a href="../../gest_projet.html"> Gestion du projet </a></li>
 		   <li><a href="../../doss_gest/page_gest.html">Gestionnaire</a></li>
@@ -29,7 +29,7 @@
   <h2>Choisir les caractéristiques du capteur à ajouter</h2>
 
 <?php 
-//Affichage des batiments
+//Display of buildings
 require '../nb_capt.php';
 echo "<br>";
 require '../nm_bat.php';
