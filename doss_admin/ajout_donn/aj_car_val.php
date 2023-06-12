@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta charset="utf-8">
+ </head>
+ <body>
+ 
 <?php
 
 require '../../connexion_bd.php';
@@ -49,11 +56,16 @@ $sql5 = "INSERT INTO mesure (ID_Mes, Date, horaire, Valeur, ID_Cap)
          VALUES ('$ID_Bat_Cap_Mes', STR_TO_DATE('$Date', '%Y-%m-%d'), '$horaire', '$val', '$ID_Bat_Cap_Mes')";
 $result5 = mysqli_query($conn, $sql5);
 
+//Disconnecting from the database
+mysqli_close($conn);
 
 if ($result3 && $result4 && $result5) {
     echo "La donnée a été ajoutée avec succès.";
 } else {
-    echo "Une erreur s'est produite lors de l'ajout de la donnée : " . mysqli_error($conn);
+    echo "Une erreur s'est produite lors de l'ajout de la donnée : ";
 }
 
 ?>
+
+</body>
+</html>

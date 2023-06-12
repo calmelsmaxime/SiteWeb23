@@ -25,7 +25,7 @@
   </header> 
 
 <section>
-  <h2>Choisir les caractéristiques de la valeur à ajouter</h2>
+  <h2>Choisissez les caractéristiques de la valeur à ajouter</h2>
 		
 <?php 
 //Display of measurements and sensors

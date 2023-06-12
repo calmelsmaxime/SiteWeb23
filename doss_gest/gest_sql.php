@@ -30,7 +30,7 @@
 
 
 
-// Récupération des données du formulaire
+
 $nom_capteur = $_POST['nom_capteur'];
 $date_debut = $_POST['date_debut'];
 $date_fin = $_POST['date_fin'];
@@ -62,7 +62,6 @@ echo '
 		
 
 
-// Recherche de l'ID du capteur 
 $sql = "SELECT * FROM capteur        
             WHERE Nom = '$nom_capteur'
 			ORDER BY ID_Cap ASC
@@ -105,12 +104,12 @@ for ($i= 1; $i <= $nb_val; $i++){
 			$mesure, '</tr>';
    
 }
+//Disconnecting from the database
+mysqli_close($conn);
 
 echo '</table>';
 
 
-//Disconnecting from the database
-mysqli_close($conn);
  
 ?>
 </table>

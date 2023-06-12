@@ -26,7 +26,7 @@
 
 
 <section>
-  <h2>Choisir les caractéristiques du Batiment à ajouter</h2>
+  <h2>Choisissez les caractéristiques du Batiment à ajouter</h2>
 
 <?php 
 //Display of buildings

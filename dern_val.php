@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta charset="utf-8">
+ </head>
+ <body>
+ 
 <?php
 // Connection to the database
 require 'connexion_bd.php';
@@ -34,6 +41,7 @@ for ($i = 1; $i <= $nb_cap; $i++){
     $result4 = mysqli_query($conn, $sql4);
 	$row4= mysqli_fetch_assoc($result4);
 
+
     echo '
     <table class="tab">
         <caption>Salle ', $cap, '</caption>
@@ -60,7 +68,9 @@ for ($i = 1; $i <= $nb_cap; $i++){
 
 
 
-
 // Disconnecting from the database
 mysqli_close($conn);
 ?>
+
+</body>
+</html>

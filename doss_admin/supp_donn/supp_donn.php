@@ -25,7 +25,7 @@
   </header> 
 
 <section>
- <h2>Choisir la donnée à supprimer</h2>
+ <h2>Choisissez la donnée à supprimer</h2>
 
 <?php 
 //Displaying the measurements

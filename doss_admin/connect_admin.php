@@ -1,4 +1,11 @@
-<?php
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta charset="utf-8">
+ </head>
+ <body>
+ 
+ <?php
 //Connecting to the database
 require '../connexion_bd.php';
 
@@ -24,3 +31,6 @@ if (mysqli_num_rows($result) == 1) {
 mysqli_close($conn);
 
 ?>
+
+</body>
+</html>

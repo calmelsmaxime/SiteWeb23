@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta charset="utf-8">
+ </head>
+ <body>
+ 
 <?php
 // Récupération de l'ID du bat 
 $ID_bat = $_POST['batID'];
@@ -25,4 +32,10 @@ echo '<strong> Le nom des capteurs sont : </strong> ';
         echo $row2['nom'] . ', ';
     }
 
+//Disconnecting from the database
+mysqli_close($conn);
+
 ?>
+
+</body>
+</html>

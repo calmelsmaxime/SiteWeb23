@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta charset="utf-8">
+ </head>
+ <body>
+ 
 <?php 
 
 //Connection to the database
@@ -15,11 +22,17 @@ $sql = "INSERT INTO batiment (ID_Bat, nom, login_gest, mdp_gest)
 		VALUES ('$ID_Bat', '$nom', '$log_gest', '$mdp_gest')";
 $result = mysqli_query($conn, $sql);
 
+//Disconnecting from the database
+mysqli_close($conn);
+
 // Check execution of the query
 if ($result) {
     echo "Le bâtiment a été ajouté avec succès.";
 } else {
-    echo "Une erreur s'est produite lors de l'ajout du bâtiment : " . mysqli_error($conn);
+    echo "Une erreur s'est produite lors de l'ajout du bâtiment : ";
 }
 
 ?>
+
+</body>
+</html>

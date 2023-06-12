@@ -1,4 +1,11 @@
-<?php
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta charset="utf-8">
+ </head>
+ <body>
+ 
+ <?php
 
 $host = 'localhost';
 $username = 'calmels';
@@ -12,3 +19,5 @@ if (!$conn) {
 }
 
 ?>
+</body>
+</html>

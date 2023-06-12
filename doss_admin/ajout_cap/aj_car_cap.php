@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta charset="utf-8">
+ </head>
+ <body>
+ 
 <?php 
 
 require '../../connexion_bd.php';
@@ -30,6 +37,9 @@ $sql3 = "INSERT INTO capteur (ID_Cap, nom, Type, ID_Bat)
 		VALUES ('$ID_Cap', '$nom', '$type', '$ID_Bat_Cap')";
 $result3 = mysqli_query($conn, $sql3);
 
+//Disconnecting from the database
+mysqli_close($conn);
+
 if ($result2 && $result3) {
     echo "Le capteur a été ajouté avec succès.";
 } else {
@@ -37,3 +47,6 @@ if ($result2 && $result3) {
 }
 
 ?>
+
+</body>
+</html>

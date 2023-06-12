@@ -25,7 +25,7 @@
   </header> 
 
 <section>
- <h2>Choisir le Batiment à supprimer</h2>
+ <h2>Choisissez le Batiment à supprimer</h2>
 	
 	<?php 
 //Displaying the buildings

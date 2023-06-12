@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta charset="utf-8">
+ </head>
+ <body>
+ 
 <?php 
 
 require '../../connexion_bd.php';
@@ -27,3 +34,6 @@ if ($result && $result2 && $result3) {
 }
 
 ?>
+
+</body>
+</html>

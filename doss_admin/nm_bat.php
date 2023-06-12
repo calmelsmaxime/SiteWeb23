@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta charset="utf-8">
+ </head>
+ <body>
+ 
 <?php 
 
 //Connecting to the database
@@ -13,9 +20,16 @@ require '../../connexion_bd.php';
 $sql2 = "SELECT DISTINCT nom FROM batiment";
 $result2 = mysqli_query($conn, $sql2);
 
+
 // Displaying the buildings
-echo ' <br> <strong> Les nom des batiment sont : </strong> ';
+echo ' <br> <strong> Le nom des batiments est : </strong> ';
     while ($row2 = mysqli_fetch_assoc($result2)) {
         echo $row2['nom'] . ', ';
     }
+	
+//Disconnecting from the database
+mysqli_close($conn);
 ?>	
+
+</body>
+</html>

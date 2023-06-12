@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html lang="fr">
  <head>
   <link rel="stylesheet" type="text/css" href="styles/header.css" media="screen"/>

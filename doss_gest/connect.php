@@ -51,7 +51,7 @@ if (mysqli_num_rows($result) == 1) {
 		$bat = mysqli_fetch_assoc($result);
 		 $batID = $bat['ID_Bat'];
 		 
-	echo "<h2>Choisir quelles données afficher pour le bâtiment $batID. </h2>";
+	echo "<h2>Choisir quelles sont les données à afficher pour le bâtiment $batID </h2>";
 
 // Query to find the number of sensors
 	$sql = "SELECT COUNT(*) AS nom FROM capteur
@@ -65,8 +65,12 @@ $sql2 = "SELECT DISTINCT nom FROM capteur
 			WHERE ID_bat LIKE '$batID%'";
 $result2 = mysqli_query($conn, $sql2);
 
+
+//Disconnecting from the database
+mysqli_close($conn);
+
 // Display sensor information
-echo '<strong> Le nom des capteurs de ce bâtiment est : </strong> ';
+echo '<strong> Le nom des capteurs de ce bâtiment sont : </strong> ';
     while ($row2 = mysqli_fetch_assoc($result2)) {
         echo $row2['nom'] . ', ';
     }
@@ -98,7 +102,7 @@ echo '<strong> Le nom des capteurs de ce bâtiment est : </strong> ';
 	</html>';
    	
 } else {
-    echo "Nom d'utilisateur ou mot de passe incorrect !"; // Informations d'identification incorrectes
+    echo "Nom d'utilisateur ou mot de passe incorrect !"; 
 }
 
 ?>

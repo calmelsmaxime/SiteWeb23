@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta charset="utf-8">
+ </head>
+ <body>
+ 
 <?php 
 
 require '../../connexion_bd.php';
@@ -56,12 +63,17 @@ $sql3 = "DELETE FROM batiment
 		WHERE ID_bat = '$ID_Bat'";
 $result3= mysqli_query($conn, $sql3);
 
+//Disconnecting from the database
+mysqli_close($conn);
 
 if ($result2 && $result3 && $result6 && $result7 && $result8) {
     echo "Le capteur a été supprimée avec succès.";
 } else {
-    echo "Une erreur s'est produite lors de la suppression du capteur" . mysqli_error($conn);
+    echo "Une erreur s'est produite lors de la suppression du capteur" ;
 }
 
 
 ?>
+
+</body>
+</html>
